@@ -1,0 +1,8 @@
+{
+  "startIvanProject": "Start Ivan Project",
+  "loginTitle": "Log in/Register",
+  "hintEnterPhoneNumber": "Phone/E-mail",
+  "getCode": "Get code",
+  "fieldCantBeEmpty": "Field can't be empty",
+  "youWroteIncorrectData": "You're wrote incorrect data"
+}
