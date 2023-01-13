@@ -20,7 +20,11 @@ class CodegenLoader extends AssetLoader{
   "hintEnterPhoneNumber": "Номер телефону/Електронна пошта",
   "getCode": "Отримати код",
   "fieldCantBeEmpty": "Поле не може бути пустим",
-  "youWroteIncorrectData": "Ви вписали невірні дані"
+  "youWroteIncorrectData": "Ви вписали невірні дані",
+  "hintEnterCode": "Введіть код",
+  "wrongCode": "Неправильний код",
+  "codeMustBe6": "Код має складатися із 6 цифр",
+  "confirm": "Підтвердження"
 };
 static const Map<String,dynamic> en = {
   "startIvanProject": "Start Ivan Project",
@@ -28,7 +32,11 @@ static const Map<String,dynamic> en = {
   "hintEnterPhoneNumber": "Phone/E-mail",
   "getCode": "Get code",
   "fieldCantBeEmpty": "Field can't be empty",
-  "youWroteIncorrectData": "You're wrote incorrect data"
+  "youWroteIncorrectData": "You're wrote incorrect data",
+  "hintEnterCode": "Enter code",
+  "wrongCode": "Wrong code",
+  "codeMustBe6": "Code must be 6 digits",
+  "confirm": "Confirm"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"uk": uk, "en": en};
 }

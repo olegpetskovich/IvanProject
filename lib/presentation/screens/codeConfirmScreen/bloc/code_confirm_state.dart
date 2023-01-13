@@ -1,25 +1,28 @@
-part of 'login_bloc.dart';
-
-class LoginState {
+class CodeConfirmState {
   final bool isSuccess;
+  final bool isLogin;
   final String? errorLabel;
 
-  LoginState({
+  CodeConfirmState({
     required this.isSuccess,
+    required this.isLogin,
     required this.errorLabel,
   });
 
-  factory LoginState.initial() => LoginState(
+  factory CodeConfirmState.initial() => CodeConfirmState(
         isSuccess: false,
+        isLogin: false,
         errorLabel: null,
       );
 
-  LoginState copyWith({
+  CodeConfirmState copyWith({
     bool? isSuccess,
+    bool? isLogin,
     String? errorLabel,
   }) {
-    return LoginState(
+    return CodeConfirmState(
       isSuccess: isSuccess ?? this.isSuccess,
+      isLogin: isLogin ?? this.isLogin,
       errorLabel: errorLabel,
     );
   }

@@ -4,5 +4,9 @@
   "hintEnterPhoneNumber": "Номер телефону/Електронна пошта",
   "getCode": "Отримати код",
   "fieldCantBeEmpty": "Поле не може бути пустим",
-  "youWroteIncorrectData": "Ви вписали невірні дані"
+  "youWroteIncorrectData": "Ви вписали невірні дані",
+  "hintEnterCode": "Введіть код",
+  "wrongCode": "Неправильний код",
+  "codeMustBe6": "Код має складатися із 6 цифр",
+  "confirm": "Підтвердження"
 }

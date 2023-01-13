@@ -9,23 +9,23 @@ part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   LoginBloc() : super(LoginState.initial()) {
-    on<LoginSendCodeEvent>(_onSendCode);
+    on<LoginGetCodeEvent>(_onGetCode);
   }
 
-  Future<void> _onSendCode(LoginSendCodeEvent event, Emitter emitter) async {
+  Future<void> _onGetCode(LoginGetCodeEvent event, Emitter emitter) async {
     event.numberOrEmail;
     if (event.numberOrEmail.isEmpty) {
       emitter(state.copyWith(errorLabel: LocaleKeys.fieldCantBeEmpty.tr()));
       return;
     }
 
-    if (!Utils.isEmailValid(event.numberOrEmail) ||
-        !Utils.isPhoneValid(event.numberOrEmail)) {
-      emitter(
-          state.copyWith(errorLabel: LocaleKeys.youWroteIncorrectData.tr()));
-      return;
-    }
+    // if (!Utils.isEmailValid(event.numberOrEmail) ||
+    //     !Utils.isPhoneValid(event.numberOrEmail)) {
+    //   emitter(
+    //       state.copyWith(errorLabel: LocaleKeys.youWroteIncorrectData.tr()));
+    //   return;
+    // }
 
-    emitter(state.copyWith(errorLabel: null));
+    emitter(state.copyWith(isSuccess: true, errorLabel: null));
   }
 }

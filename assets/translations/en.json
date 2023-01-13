@@ -4,5 +4,9 @@
   "hintEnterPhoneNumber": "Phone/E-mail",
   "getCode": "Get code",
   "fieldCantBeEmpty": "Field can't be empty",
-  "youWroteIncorrectData": "You're wrote incorrect data"
+  "youWroteIncorrectData": "You're wrote incorrect data",
+  "hintEnterCode": "Enter code",
+  "wrongCode": "Wrong code",
+  "codeMustBe6": "Code must be 6 digits",
+  "confirm": "Confirm"
 }

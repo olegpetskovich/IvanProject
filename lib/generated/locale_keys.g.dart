@@ -7,5 +7,9 @@ abstract class  LocaleKeys {
   static const getCode = 'getCode';
   static const fieldCantBeEmpty = 'fieldCantBeEmpty';
   static const youWroteIncorrectData = 'youWroteIncorrectData';
+  static const hintEnterCode = 'hintEnterCode';
+  static const wrongCode = 'wrongCode';
+  static const codeMustBe6 = 'codeMustBe6';
+  static const confirm = 'confirm';
 
 }
