@@ -10,7 +10,6 @@ import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_co
 import 'package:ivan_project/presentation/widgets/app_bar.dart';
 import 'package:ivan_project/presentation/widgets/default_button.dart';
 import 'package:ivan_project/presentation/widgets/default_text_field.dart';
-import 'package:ivan_project/utils/Utils.dart';
 
 class CodeConfirmScreen extends StatefulWidget {
   const CodeConfirmScreen({Key? key}) : super(key: key);

@@ -1,4 +1,5 @@
 {
+  "appName": "Ivan Project",
   "startIvanProject": "Старт Ваніного Проекта",
   "loginTitle": "Авторизуватися",
   "hintEnterPhoneNumber": "Номер телефону/Електронна пошта",
@@ -8,5 +9,9 @@
   "hintEnterCode": "Введіть код",
   "wrongCode": "Неправильний код",
   "codeMustBe6": "Код має складатися із 6 цифр",
-  "confirm": "Підтвердження"
+  "confirm": "Підтвердження",
+  "urlPolicy": "https://uk.wikipedia.org/wiki/",
+  "splashText": "Натискаючи СТАРТ, ви підтверджуєте, що вами була прочитана та прийнята ",
+  "privacyPolicy": "Політика конфіденційності",
+  "start": "СТАРТ"
 }

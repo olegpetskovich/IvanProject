@@ -1,4 +1,5 @@
 {
+  "appName": "Ivan Project",
   "startIvanProject": "Start Ivan Project",
   "loginTitle": "Log in/Register",
   "hintEnterPhoneNumber": "Phone/E-mail",
@@ -8,5 +9,9 @@
   "hintEnterCode": "Enter code",
   "wrongCode": "Wrong code",
   "codeMustBe6": "Code must be 6 digits",
-  "confirm": "Confirm"
+  "confirm": "Confirm",
+  "urlPolicy": "https://uk.wikipedia.org/wiki/",
+  "splashText": "By clicking START, you confirm that you have read and acknowledged ",
+  "privacyPolicy": "Privacy Policy",
+  "start": "START"
 }

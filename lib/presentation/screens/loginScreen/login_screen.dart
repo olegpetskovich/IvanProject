@@ -9,7 +9,7 @@ import 'package:ivan_project/presentation/screens/loginScreen/bloc/login_bloc.da
 import 'package:ivan_project/presentation/widgets/default_button.dart';
 import 'package:ivan_project/presentation/widgets/app_bar.dart';
 import 'package:ivan_project/presentation/widgets/default_text_field.dart';
-import 'package:ivan_project/utils/Utils.dart';
+import 'package:ivan_project/utils/utils.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

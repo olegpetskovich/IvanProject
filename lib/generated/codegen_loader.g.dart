@@ -15,6 +15,7 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> uk = {
+  "appName": "Ivan Project",
   "startIvanProject": "Старт Ваніного Проекта",
   "loginTitle": "Авторизуватися",
   "hintEnterPhoneNumber": "Номер телефону/Електронна пошта",
@@ -24,9 +25,14 @@ class CodegenLoader extends AssetLoader{
   "hintEnterCode": "Введіть код",
   "wrongCode": "Неправильний код",
   "codeMustBe6": "Код має складатися із 6 цифр",
-  "confirm": "Підтвердження"
+  "confirm": "Підтвердження",
+  "urlPolicy": "https://uk.wikipedia.org/wiki/",
+  "splashText": "Натискаючи СТАРТ, ви підтверджуєте, що вами була прочитана та прийнята ",
+  "privacyPolicy": "Політика конфіденційності",
+  "start": "СТАРТ"
 };
 static const Map<String,dynamic> en = {
+  "appName": "Ivan Project",
   "startIvanProject": "Start Ivan Project",
   "loginTitle": "Log in/Register",
   "hintEnterPhoneNumber": "Phone/E-mail",
@@ -36,7 +42,11 @@ static const Map<String,dynamic> en = {
   "hintEnterCode": "Enter code",
   "wrongCode": "Wrong code",
   "codeMustBe6": "Code must be 6 digits",
-  "confirm": "Confirm"
+  "confirm": "Confirm",
+  "urlPolicy": "https://uk.wikipedia.org/wiki/",
+  "splashText": "By clicking START, you confirm that you have read and acknowledged ",
+  "privacyPolicy": "Privacy Policy",
+  "start": "START"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"uk": uk, "en": en};
 }

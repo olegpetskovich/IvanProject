@@ -41,6 +41,8 @@ dependencies:
   flutter_bloc: ^8.1.1
   http: ^0.13.5
   email_validator: ^2.1.17
+  shared_preferences: ^2.0.16
+  url_launcher: ^6.1.7
 
 dev_dependencies:
   flutter_test:
