@@ -3,10 +3,11 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ivan_project/generated/locale_keys.g.dart';
 import 'package:ivan_project/presentation/consts/styles.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:ivan_project/presentation/screens/linkOpenerScreen/link_opener_screen.dart';
+import 'package:ivan_project/utils/utils.dart';
 
-class SplashText extends StatelessWidget {
-  const SplashText({
+class PolicyText extends StatelessWidget {
+  const PolicyText({
     super.key,
     required this.urlPolicy,
   });
@@ -27,11 +28,13 @@ class SplashText extends StatelessWidget {
                 text: LocaleKeys.privacyPolicy.tr(),
                 style: Styles.textBlack15Underline,
                 recognizer: TapGestureRecognizer()
-                  ..onTap = () async {
-                    if (await canLaunchUrl(urlPolicy)) {
-                      launchUrl(urlPolicy,
-                          mode: LaunchMode.externalNonBrowserApplication);
-                    }
+                  ..onTap = () {
+                    Utils.navigate(
+                        context,
+                        LinkOpenerScreen(
+                            title: LocaleKeys.privacyPolicy.tr(),
+                            link: LocaleKeys.urlPolicy.tr()),
+                        false);
                   }),
           ],
         ),

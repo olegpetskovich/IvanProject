@@ -6,6 +6,7 @@ import 'package:ivan_project/generated/locale_keys.g.dart';
 import 'package:ivan_project/presentation/consts/icons.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/code_confirm_screen.dart';
 import 'package:ivan_project/presentation/screens/loginScreen/bloc/login_bloc.dart';
+import 'package:ivan_project/presentation/widgets/policy_text.dart';
 import 'package:ivan_project/presentation/widgets/default_button.dart';
 import 'package:ivan_project/presentation/widgets/app_bar.dart';
 import 'package:ivan_project/presentation/widgets/default_text_field.dart';
@@ -38,6 +39,13 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   @override
+  void didUpdateWidget(covariant LoginScreen oldWidget) {
+    print("Login Screen didUpdateWidget called");
+    // TODO: implement didUpdateWidget
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
   Widget build(BuildContext context) {
     print("build LoginScreen");
 
@@ -66,10 +74,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     controller: _inputNumberEmailController,
                     errorLabel: state.errorLabel,
                   ),
-                  DefaultButton(
-                    buttonText: LocaleKeys.getCode.tr(),
-                    onPressed: () => _bloc.add(LoginGetCodeEvent(
-                        numberOrEmail: _inputNumberEmailController.text)),
+                  Column(
+                    children: [
+                      DefaultButton(
+                        buttonText: LocaleKeys.getCode.tr(),
+                        onPressed: () => _bloc.add(LoginGetCodeEvent(
+                            numberOrEmail: _inputNumberEmailController.text)),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: PolicyText(urlPolicy: Uri.parse(LocaleKeys.urlPolicy.tr())),
+                      ),
+                    ],
                   ),
                 ],
               );
@@ -82,7 +98,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Route _createRoute() {
     return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => CodeConfirmScreen(),
+      pageBuilder: (context, animation, secondaryAnimation) =>
+          CodeConfirmScreen(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         const begin = Offset(0.0, 1.0);
         const end = Offset.zero;

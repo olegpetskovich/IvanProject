@@ -27,7 +27,7 @@ class CodegenLoader extends AssetLoader{
   "codeMustBe6": "Код має складатися із 6 цифр",
   "confirm": "Підтвердження",
   "urlPolicy": "https://uk.wikipedia.org/wiki/",
-  "splashText": "Натискаючи СТАРТ, ви підтверджуєте, що вами була прочитана та прийнята ",
+  "splashText": "Натискаючи кнопку, ви підтверджуєте, що вами була прочитана та прийнята ",
   "privacyPolicy": "Політика конфіденційності",
   "start": "СТАРТ"
 };
@@ -44,7 +44,7 @@ static const Map<String,dynamic> en = {
   "codeMustBe6": "Code must be 6 digits",
   "confirm": "Confirm",
   "urlPolicy": "https://uk.wikipedia.org/wiki/",
-  "splashText": "By clicking START, you confirm that you have read and acknowledged ",
+  "splashText": "By clicking button, you confirm that you have read and acknowledged ",
   "privacyPolicy": "Privacy Policy",
   "start": "START"
 };

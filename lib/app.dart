@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:ivan_project/presentation/screens/splashScreen/splash_screen.dart';
+import 'package:ivan_project/presentation/screens/loginScreen/login_screen.dart';
 
 class IvanApp extends StatelessWidget {
   const IvanApp({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class IvanApp extends StatelessWidget {
           },
         ),
       ),
-      home: const SplashScreen(),
+      home: const LoginScreen(),
     );
   }
 }

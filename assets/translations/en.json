@@ -11,7 +11,7 @@
   "codeMustBe6": "Code must be 6 digits",
   "confirm": "Confirm",
   "urlPolicy": "https://uk.wikipedia.org/wiki/",
-  "splashText": "By clicking START, you confirm that you have read and acknowledged ",
+  "splashText": "By clicking button, you confirm that you have read and acknowledged ",
   "privacyPolicy": "Privacy Policy",
   "start": "START"
 }
