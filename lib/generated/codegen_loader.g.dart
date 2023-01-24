@@ -29,14 +29,18 @@ class CodegenLoader extends AssetLoader{
   "urlPolicy": "https://uk.wikipedia.org/wiki/",
   "splashText": "Натискаючи кнопку, ви підтверджуєте, що вами була прочитана та прийнята ",
   "privacyPolicy": "Політика конфіденційності",
-  "start": "СТАРТ"
+  "start": "СТАРТ",
+  "enterCodeEmailOrPhone": "Будь ласка, введіть свій контактний номер телефону або електронну адресу для отримання коду доступу",
+  "enterCodeEmail": "Будь ласка, введіть свою контактну електронну адресу, щоб отримати код доступу",
+  "slogan": "Just business",
+  "checkYourMailOrSms": "Перевірте свою пошту або смс, куди вам повинен прийти код підтвердження для входу в обліковий запис"
 };
 static const Map<String,dynamic> en = {
   "appName": "Ivan Project",
   "startIvanProject": "Start Ivan Project",
   "loginTitle": "Log in/Register",
   "hintEnterPhoneNumber": "Phone/E-mail",
-  "getCode": "Get code",
+  "getCode": "Get Code",
   "fieldCantBeEmpty": "Field can't be empty",
   "youWroteIncorrectData": "You're wrote incorrect data",
   "hintEnterCode": "Enter code",
@@ -46,7 +50,11 @@ static const Map<String,dynamic> en = {
   "urlPolicy": "https://uk.wikipedia.org/wiki/",
   "splashText": "By clicking button, you confirm that you have read and acknowledged ",
   "privacyPolicy": "Privacy Policy",
-  "start": "START"
+  "start": "START",
+  "enterCodeEmailOrPhone": "Please, enter your contact telephone or email to receive the access code",
+  "enterCodeEmail": "Please, enter your contact email to receive the access code",
+  "slogan": "Just business",
+  "checkYourMailOrSms": "Check your mail or sms, where you should receive a confirmation code to enter your account"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"uk": uk, "en": en};
 }

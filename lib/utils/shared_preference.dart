@@ -1,15 +1,20 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SharedPref {
-  static const String _isPolicyAcceptedKey = 'isAcceptedPolicyKey';
+  static const String _loggedStatusKey = 'loggedStatusKey';
 
-  static Future<void> acceptPolicy() async {
+  static Future<void> setLoggedInStatus() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool(_isPolicyAcceptedKey, true);
+    sharedPreferences.setBool(_loggedStatusKey, true);
   }
 
-  static Future<bool> isPolicyAccepted() async {
+  static Future<void> setLoggedOutStatus() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-    return sharedPreferences.getBool(_isPolicyAcceptedKey) ?? false;
+    sharedPreferences.setBool(_loggedStatusKey, false);
+  }
+
+  static Future<bool> isLoggedIn() async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    return sharedPreferences.getBool(_loggedStatusKey) ?? false;
   }
 }

@@ -16,5 +16,9 @@ abstract class  LocaleKeys {
   static const splashText = 'splashText';
   static const privacyPolicy = 'privacyPolicy';
   static const start = 'start';
+  static const enterCodeEmailOrPhone = 'enterCodeEmailOrPhone';
+  static const enterCodeEmail = 'enterCodeEmail';
+  static const slogan = 'slogan';
+  static const checkYourMailOrSms = 'checkYourMailOrSms';
 
 }

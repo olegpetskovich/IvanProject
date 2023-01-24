@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../consts/styles.dart';
+
 class DefaultButton extends StatelessWidget {
   const DefaultButton(
       {super.key, required this.buttonText, required this.onPressed});
@@ -24,7 +26,7 @@ class DefaultButton extends StatelessWidget {
               padding: const EdgeInsets.all(10),
               child: Text(
                 buttonText.toUpperCase(),
-                style: const TextStyle(fontSize: 25, color: Colors.black),
+                style: Styles.textBlack22,
               )),
         ),
       ),

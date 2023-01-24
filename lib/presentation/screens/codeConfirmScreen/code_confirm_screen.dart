@@ -1,15 +1,16 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg_provider/flutter_svg_provider.dart';
 import 'package:ivan_project/generated/locale_keys.g.dart';
-import 'package:ivan_project/presentation/consts/icons.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_confirm_bloc.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_confirm_event.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_confirm_state.dart';
 import 'package:ivan_project/presentation/widgets/app_bar.dart';
 import 'package:ivan_project/presentation/widgets/default_button.dart';
 import 'package:ivan_project/presentation/widgets/default_text_field.dart';
+import 'package:ivan_project/presentation/widgets/logo_slogan.dart';
+
+import '../../consts/styles.dart';
 
 class CodeConfirmScreen extends StatefulWidget {
   const CodeConfirmScreen({Key? key}) : super(key: key);
@@ -52,16 +53,25 @@ class _CodeConfirmScreenState extends State<CodeConfirmScreen> {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const CircleAvatar(
-                    radius: 70,
-                    backgroundImage: Svg(icLogo),
-                  ),
-                  DefaultTextField(
-                    hint: LocaleKeys.hintEnterCode.tr(),
-                    controller: _inputConfirmCodeController,
-                    // errorLabel: state.isSuccess ? null : state.errorLabel,
-                    errorLabel: state.errorLabel,
-                    textInputType: TextInputType.number,
+                  const LogoSlogan(),
+                  Column(
+                    children: [
+                      DefaultTextField(
+                        hint: LocaleKeys.hintEnterCode.tr(),
+                        controller: _inputConfirmCodeController,
+                        // errorLabel: state.isSuccess ? null : state.errorLabel,
+                        errorLabel: state.errorLabel,
+                        textInputType: TextInputType.number,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Text(
+                          LocaleKeys.checkYourMailOrSms.tr(),
+                          textAlign: TextAlign.center,
+                          style: Styles.textGrey15,
+                        ),
+                      )
+                    ],
                   ),
                   DefaultButton(
                     buttonText: LocaleKeys.confirm.tr(),
