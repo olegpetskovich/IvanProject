@@ -30,11 +30,11 @@ class PolicyText extends StatelessWidget {
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
                     Utils.navigate(
-                        context,
-                        LinkOpenerScreen(
+                        context: context,
+                        screenWidget: LinkOpenerScreen(
                             title: LocaleKeys.privacyPolicy.tr(),
                             link: LocaleKeys.urlPolicy.tr()),
-                        false);
+                        isClearStack: false);
                   }),
           ],
         ),

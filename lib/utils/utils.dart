@@ -7,7 +7,7 @@ class Utils {
   static bool isPhoneValid(String text) =>
       RegExp(r'(^(?:[+0]9)?[0-9]{10,12}$)').hasMatch(text);
 
-  static void navigate(context, screenWidget, isClearStack) {
+  static void navigate({required context, required screenWidget, required isClearStack}) {
     if (isClearStack) {
       Navigator.of(context).pushAndRemoveUntil(
           CupertinoPageRoute(builder: (context) => screenWidget),

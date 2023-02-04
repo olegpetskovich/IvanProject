@@ -45,7 +45,10 @@ class _LoginScreenState extends State<LoginScreen> {
             bloc: _bloc,
             listener: (context, state) {
               if (state.isSuccess) {
-                Utils.navigate(context, const CodeConfirmScreen(), false);
+                Utils.navigate(
+                    context: context,
+                    screenWidget: const CodeConfirmScreen(),
+                    isClearStack: false);
               }
             },
             builder: (context, state) {

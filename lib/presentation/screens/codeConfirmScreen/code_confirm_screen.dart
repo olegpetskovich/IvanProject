@@ -5,10 +5,13 @@ import 'package:ivan_project/generated/locale_keys.g.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_confirm_bloc.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_confirm_event.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_confirm_state.dart';
+import 'package:ivan_project/presentation/screens/homeScreen/home_screen.dart';
 import 'package:ivan_project/presentation/widgets/app_bar.dart';
 import 'package:ivan_project/presentation/widgets/default_button.dart';
 import 'package:ivan_project/presentation/widgets/default_text_field.dart';
 import 'package:ivan_project/presentation/widgets/logo_slogan.dart';
+import 'package:ivan_project/utils/shared_preference.dart';
+import 'package:ivan_project/utils/utils.dart';
 
 import '../../consts/styles.dart';
 
@@ -46,7 +49,11 @@ class _CodeConfirmScreenState extends State<CodeConfirmScreen> {
             bloc: _bloc,
             listener: (context, state) {
               if (state.isSuccess) {
-                // Utils.navigate(context, const CodeConfirmScreen(), false);
+                SharedPref.setLoggedStatus(isLogged: true);
+                Utils.navigate(
+                    context: context,
+                    screenWidget: const HomeScreen(),
+                    isClearStack: true);
               }
             },
             builder: (context, state) {
