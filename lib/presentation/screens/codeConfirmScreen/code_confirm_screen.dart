@@ -2,10 +2,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ivan_project/generated/locale_keys.g.dart';
+import 'package:ivan_project/presentation/screens/fillAccountsDataScreen/fill_accounts_data_screen.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_confirm_bloc.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_confirm_event.dart';
 import 'package:ivan_project/presentation/screens/codeConfirmScreen/bloc/code_confirm_state.dart';
-import 'package:ivan_project/presentation/screens/homeScreen/home_screen.dart';
 import 'package:ivan_project/presentation/widgets/app_bar.dart';
 import 'package:ivan_project/presentation/widgets/default_button.dart';
 import 'package:ivan_project/presentation/widgets/default_text_field.dart';
@@ -41,10 +41,10 @@ class _CodeConfirmScreenState extends State<CodeConfirmScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: TitleTextAppBar(LocaleKeys.confirm.tr()),
-      body: SafeArea(
-        child: Center(
+    return SafeArea(
+      child: Scaffold(
+        appBar: TitleTextAppBar(LocaleKeys.confirm.tr()),
+        body: Center(
           child: BlocConsumer<CodeConfirmBloc, CodeConfirmState>(
             bloc: _bloc,
             listener: (context, state) {
@@ -52,8 +52,9 @@ class _CodeConfirmScreenState extends State<CodeConfirmScreen> {
                 SharedPref.setLoggedStatus(isLogged: true);
                 Utils.navigate(
                     context: context,
-                    screenWidget: const HomeScreen(),
-                    isClearStack: true);
+                    screenWidget: const FillAccountsDataScreen(),
+                    // screenWidget: const HomeScreen(),
+                    isClearStack: false);
               }
             },
             builder: (context, state) {
@@ -63,19 +64,22 @@ class _CodeConfirmScreenState extends State<CodeConfirmScreen> {
                   const LogoSlogan(),
                   Column(
                     children: [
-                      DefaultTextField(
-                        hint: LocaleKeys.hintEnterCode.tr(),
-                        controller: _inputConfirmCodeController,
-                        // errorLabel: state.isSuccess ? null : state.errorLabel,
-                        errorLabel: state.errorLabel,
-                        textInputType: TextInputType.number,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 40),
+                        child: DefaultTextField(
+                          hint: LocaleKeys.hintEnterCode.tr(),
+                          controller: _inputConfirmCodeController,
+                          // errorLabel: state.isSuccess ? null : state.errorLabel,
+                          errorLabel: state.errorLabel,
+                          textInputType: TextInputType.number,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(12),
                         child: Text(
                           LocaleKeys.checkYourMailOrSms.tr(),
                           textAlign: TextAlign.center,
-                          style: Styles.textGrey15,
+                          style: Styles.textColorMainLight15,
                         ),
                       )
                     ],

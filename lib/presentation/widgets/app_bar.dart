@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ivan_project/presentation/consts/colors.dart';
 
 class TitleTextAppBar extends StatelessWidget with PreferredSizeWidget {
-  const TitleTextAppBar(this.titleText, {
+  const TitleTextAppBar(
+    this.titleText, {
     Key? key,
   }) : super(key: key);
 
@@ -10,9 +12,15 @@ class TitleTextAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(titleText),
+      title: Text(
+        titleText,
+        style: TextStyle(color: AppColors.colorLight),
+      ),
+      iconTheme: IconThemeData(
+        color: AppColors.colorLight, //change your color here
+      ),
       centerTitle: true,
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.colorMain,
     );
   }
 

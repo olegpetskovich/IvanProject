@@ -23,7 +23,7 @@ class LogoSlogan extends StatelessWidget {
           child: Text(
             LocaleKeys.slogan.tr().toUpperCase(),
             textAlign: TextAlign.center,
-            style: Styles.textBlackBold30,
+            style: Styles.textColorMainBold30,
           ),
         )
       ],

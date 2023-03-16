@@ -20,5 +20,11 @@ abstract class  LocaleKeys {
   static const enterCodeEmail = 'enterCodeEmail';
   static const slogan = 'slogan';
   static const checkYourMailOrSms = 'checkYourMailOrSms';
+  static const accountsInfoTitle = 'accountsInfoTitle';
+  static const accountsInfoText = 'accountsInfoText';
+  static const business = 'business';
+  static const entertainment = 'entertainment';
+  static const name = 'name';
+  static const userName = 'userName';
 
 }

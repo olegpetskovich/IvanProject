@@ -17,5 +17,11 @@
   "enterCodeEmailOrPhone": "Please, enter your contact telephone or email to receive the access code",
   "enterCodeEmail": "Please, enter your contact email to receive the access code",
   "slogan": "Just business",
-  "checkYourMailOrSms": "Check your mail or sms, where you should receive a confirmation code to enter your account"
+  "checkYourMailOrSms": "Check your mail or sms, where you should receive a confirmation code to enter your account",
+  "accountsInfoTitle": "Register your accounts",
+  "accountsInfoText": "Our application provides the opportunity to have two internal accounts to separate the topics of your activities",
+  "business": "Business",
+  "entertainment": "Entertainment",
+  "name": "Name",
+  "userName": "User name"
 }

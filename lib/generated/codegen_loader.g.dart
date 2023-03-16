@@ -33,7 +33,13 @@ class CodegenLoader extends AssetLoader{
   "enterCodeEmailOrPhone": "Будь ласка, введіть свій контактний номер телефону або електронну адресу для отримання коду доступу",
   "enterCodeEmail": "Будь ласка, введіть свою контактну електронну адресу, щоб отримати код доступу",
   "slogan": "Just business",
-  "checkYourMailOrSms": "Перевірте свою пошту або смс, куди вам повинен прийти код підтвердження для входу в обліковий запис"
+  "checkYourMailOrSms": "Перевірте свою пошту або смс, куди вам повинен прийти код підтвердження для входу в обліковий запис",
+  "accountsInfoTitle": "Реєстрація аккаунтів",
+  "accountsInfoText": "Наш додаток надає можливість створити два внутрішні облікові записи для розділення тематики вашої діяльності",
+  "business": "Бізнес",
+  "entertainment": "Розваги",
+  "name": "Ім'я",
+  "userName": "Унікальне ім'я"
 };
 static const Map<String,dynamic> en = {
   "appName": "Ivan Project",
@@ -54,7 +60,13 @@ static const Map<String,dynamic> en = {
   "enterCodeEmailOrPhone": "Please, enter your contact telephone or email to receive the access code",
   "enterCodeEmail": "Please, enter your contact email to receive the access code",
   "slogan": "Just business",
-  "checkYourMailOrSms": "Check your mail or sms, where you should receive a confirmation code to enter your account"
+  "checkYourMailOrSms": "Check your mail or sms, where you should receive a confirmation code to enter your account",
+  "accountsInfoTitle": "Register your accounts",
+  "accountsInfoText": "Our application provides the opportunity to have two internal accounts to separate the topics of your activities",
+  "business": "Business",
+  "entertainment": "Entertainment",
+  "name": "Name",
+  "userName": "User name"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"uk": uk, "en": en};
 }

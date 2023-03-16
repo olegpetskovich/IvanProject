@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:ivan_project/presentation/consts/colors.dart';
 import 'package:ivan_project/presentation/screens/homeScreen/home_screen.dart';
 import 'package:ivan_project/presentation/screens/loginScreen/login_screen.dart';
 import 'package:ivan_project/utils/shared_preference.dart';
@@ -37,6 +38,7 @@ class _IvanAppState extends State<IvanApp> {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: ThemeData(
+        primarySwatch: Colors.grey,
         pageTransitionsTheme: const PageTransitionsTheme(
           builders: {
             TargetPlatform.android: CupertinoPageTransitionsBuilder(),

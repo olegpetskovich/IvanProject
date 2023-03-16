@@ -43,6 +43,8 @@ dependencies:
   email_validator: ^2.1.17
   shared_preferences: ^2.0.16
   webview_flutter: ^4.0.2
+  image_picker: ^0.8.6+4
+  image_cropper: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -72,6 +74,9 @@ flutter:
     - assets/images/ic_chats.svg
     - assets/images/ic_deals.svg
     - assets/images/ic_settings.svg
+    - assets/images/ic_business.svg
+    - assets/images/ic_game.svg
+    - assets/images/ic_photo_placeholder.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

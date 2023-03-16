@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ivan_project/presentation/consts/colors.dart';
 
 import '../consts/styles.dart';
 
@@ -17,16 +18,16 @@ class DefaultButton extends StatelessWidget {
         width: double.maxFinite,
         child: OutlinedButton(
           style: OutlinedButton.styleFrom(
-            side: const BorderSide(width: 2, color: Colors.black),
+            side: BorderSide(width: 2, color: AppColors.colorMain!),
             shape: const StadiumBorder(),
-            backgroundColor: Colors.white,
+            backgroundColor: AppColors.colorLight,
           ),
           onPressed: () => onPressed(),
           child: Padding(
               padding: const EdgeInsets.all(10),
               child: Text(
                 buttonText.toUpperCase(),
-                style: Styles.textBlack22,
+                style: Styles.textColorMain22,
               )),
         ),
       ),

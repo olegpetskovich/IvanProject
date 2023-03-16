@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:ivan_project/presentation/consts/colors.dart';
 
 class Styles {
-  static const textBlack15 = TextStyle(
+  static final textColorMain15 = TextStyle(
     fontSize: 15,
-    color: Colors.black,
+    color: AppColors.colorText,
   );
 
-  static var textGrey15 = TextStyle(
+  static final textColorMainLight15 = TextStyle(
     fontSize: 15,
-    color: Colors.grey[700],
+    color: AppColors.colorText,
   );
 
-  static const textBlack22 = TextStyle(
+  static final textColorMain22 = TextStyle(
     fontSize: 22,
-    color: Colors.black,
+    color: AppColors.colorText,
   );
 
-  static const textBlackBold30 = TextStyle(
+  static final textColorMainBold30 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.bold,
-    color: Colors.black,
+    color: AppColors.colorText,
   );
 
-  static const textBlack15Underline = TextStyle(
+  static final textColorMain15Underline = TextStyle(
     fontSize: 15,
-    color: Colors.black,
+    color: AppColors.colorText,
     fontWeight: FontWeight.bold,
     decoration: TextDecoration.underline,
   );

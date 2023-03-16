@@ -19,17 +19,20 @@ class TextFieldWithInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        DefaultTextField(
-          hint: LocaleKeys.hintEnterPhoneNumber.tr(),
-          controller: inputNumberEmailController,
-          errorLabel: state.errorLabel,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: DefaultTextField(
+            hint: LocaleKeys.hintEnterPhoneNumber.tr(),
+            controller: inputNumberEmailController,
+            errorLabel: state.errorLabel,
+          ),
         ),
         Padding(
           padding: const EdgeInsets.all(12),
           child: Text(
             LocaleKeys.enterCodeEmailOrPhone.tr(),
             textAlign: TextAlign.center,
-            style: Styles.textGrey15,
+            style: Styles.textColorMainLight15,
           ),
         )
       ],

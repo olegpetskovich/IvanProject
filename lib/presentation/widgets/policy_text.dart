@@ -21,12 +21,12 @@ class PolicyText extends StatelessWidget {
       child: Text.rich(
         textAlign: TextAlign.center,
         TextSpan(
-          style: Styles.textBlack15,
+          style: Styles.textColorMain15,
           text: LocaleKeys.splashText.tr(),
           children: [
             TextSpan(
                 text: LocaleKeys.privacyPolicy.tr(),
-                style: Styles.textBlack15Underline,
+                style: Styles.textColorMain15Underline,
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
                     Utils.navigate(

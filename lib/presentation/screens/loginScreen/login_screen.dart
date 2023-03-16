@@ -37,10 +37,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: TitleTextAppBar(LocaleKeys.loginTitle.tr()),
-      body: SafeArea(
-        child: Center(
+    return SafeArea(
+      child: Scaffold(
+        appBar: TitleTextAppBar(LocaleKeys.loginTitle.tr()),
+        body: Center(
           child: BlocConsumer<LoginBloc, LoginState>(
             bloc: _bloc,
             listener: (context, state) {
