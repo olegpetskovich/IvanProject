@@ -17,15 +17,7 @@ class _AnimatedHiddenPanelState extends State<AnimatedHiddenPanel> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        setState(() {
-          final listViewContext = key.currentContext;
-          final listViewBox = listViewContext?.findRenderObject() as RenderBox?;
-          listViewHeight = (listViewBox?.size.height ?? 0) * itemsCount;
-
-          isExpanded = !isExpanded;
-        });
-      },
+      onTap: () {},
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 400),
         height: isExpanded ? listViewHeight : 56,
@@ -61,7 +53,8 @@ class _AnimatedHiddenPanelState extends State<AnimatedHiddenPanel> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 14, horizontal: 2),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 14, horizontal: 2),
                         child: VerticalDivider(
                           thickness: 1,
                           color: Colors.white,
@@ -71,9 +64,20 @@ class _AnimatedHiddenPanelState extends State<AnimatedHiddenPanel> {
                         padding: const EdgeInsets.symmetric(horizontal: 4),
                         child: CircleAvatar(
                           backgroundColor: Colors.black,
-                          child: Text(
-                            '$index',
-                            style: const TextStyle(color: Colors.grey),
+                          child: TextButton(
+                            onPressed: () => setState(() {
+                              final listViewContext = key.currentContext;
+                              final listViewBox = listViewContext
+                                  ?.findRenderObject() as RenderBox?;
+                              listViewHeight =
+                                  (listViewBox?.size.height ?? 0) * itemsCount;
+
+                              isExpanded = !isExpanded;
+                            }),
+                            child: Text(
+                              '$index',
+                              style: const TextStyle(color: Colors.grey),
+                            ),
                           ),
                         ),
                       ),
